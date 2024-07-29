@@ -1,5 +1,7 @@
 package com.example.shop;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -23,7 +25,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+
+    public void clickCall(View view){
+        Intent i = new Intent();
+        i.setAction(Intent.ACTION_CALL);
+        i.setData(Uri.parse("886422058000"));
+        startActivity(i);
+    }
+
     public void clickMap(View view){
-        Intent i =
+        Intent i = new Intent();
+        i.setAction(Intent.ACTION_VIEW);
+        i.setData(Uri.parse("geo:0,0?q=好食慢慢"));
+        startActivity(i);
+    }
+
+    public void sendEmail(View view){
+        Intent i = new Intent();
+        i.setAction(Intent.ACTION_SEND);
+        i.setData(Uri.parse("d1204387@o365.fcu.edu.tw"));
+        startActivity(i);
     }
 }
