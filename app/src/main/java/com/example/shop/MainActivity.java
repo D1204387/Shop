@@ -47,4 +47,5 @@ public class MainActivity extends AppCompatActivity {
         i.setData(Uri.parse("d1204387@o365.fcu.edu.tw"));
         startActivity(i);
     }
+    
 }
